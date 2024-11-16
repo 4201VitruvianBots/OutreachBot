@@ -8,6 +8,7 @@ import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.Autos;
 import frc.robot.commands.BibidiBoiletSigma;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.abc;
 import frc.robot.subsystems.BibidiBoilet;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
@@ -53,6 +54,7 @@ public class RobotContainer {
     // cancelling on release.
     m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
     m_driverController.y().whileTrue(new BibidiBoiletSigma(m_bibidiBoilet, .5));
+    m_driverController.x().whileTrue(new abc(m_bibidiBoilet));
   }
 
   /**
